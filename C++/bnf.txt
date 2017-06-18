@@ -1,0 +1,42 @@
+Assignmentについて。
+
+1.構文の定義(EBNF)
+
+syntax		= identifier "=" { identifier "="} expression ";"
+expression	= term{("+"|"-")term}
+term		= factor{("*"|"/")factor}
+factor		= identifier | value | "(" expression ")"
+identifier	= letter{letter | digit}
+value		= ("1"|...|"9"){digit}
+letter		= "A"|"B"|...|"Z"|"a"|"b"|...|"z"
+digit		= "0"|"1"|"2"|...|"9"
+
+S = I "=" { I "="} E ";"
+E = T{("+"|"-")T}
+T = F{("*"|"/")F}
+F = I | V | "(" E ")"
+I = L{L | D}
+V = ("1"|...|"9"){D}
+L = "A"|"B"|...|"Z"|"a"|"b"|...|"z"
+D = "0"|"1"|"2"|...|"9"
+
+2.各非終端記号Kについて First(K)とFollow(K)
+
+First(S) = { "A"|...|"Z"|"a"|...|"z" }
+First(E) = { "("|"A"|...|"Z"|"a"|...|"z"|"1"|...|"9"}
+First(T) = { "("|"A"|...|"Z"|"a"|...|"z"|"1"|...|"9"}
+First(F) = { "("|"A"|...|"Z"|"a"|...|"z"|"1"|...|"9"}
+First(I) = { "A"|...|"Z"|"a"|...|"z" }
+First(V) = { "1"|...|"9" }
+
+Follow(S) = { ";" }
+Follow(E) = { ")"|";" }
+Follow(T) = { "+"|"-"|")"|";" }
+Follow(F) = { "+"|"-"|"*"|"/"|")"|";" }
+Follow(I) = { "="|"+"|"-"|"*"|"/"|")"|";" }
+Follow(V) = { "+"|"-"|"*"|"/"|")"|";" }
+
+3.program
+
+4.結果
+

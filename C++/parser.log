@@ -1,0 +1,46 @@
+decpc20 % g++ parser.cpp -o parser
+decpc20 % ./parser
+x=a+b;
+This is identifier.
+This is identifier.
+This is identifier.
+Succeeded.
+x=a+b;
+
+decpc20 % ./parser
+p=q=(i-j)/(2*j+k);
+This is identifier.
+This is identifier.
+This is identifier.
+This is identifier.
+This is value.
+This is identifier.
+This is identifier.
+Succeeded.
+p=q=(i-j)/(2*j+k);
+
+以上のように例に載っているものは通る。
+errorが出る場合は以下のようになる。
+
+(代入になっていない場合)
+decpc20 % ./parser
+hoge=bsd44-bsd43=bsd;
+This is identifier.
+This is identifier.
+This is identifier.
+Syntax error at 17th character.
+Error code is 2.
+
+(括弧の対応が取れていない場合)
+decpc20 % ./parser
+x=(9*8-(i-j);
+This is identifier.
+This is value.
+This is value.
+This is identifier.
+This is identifier.
+Syntax error at 13th character.
+Error code is 9.
+
+ほかにもエラーの種類があり、全部で14箇所で検出している。
+
