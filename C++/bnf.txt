@@ -1,6 +1,6 @@
-Assignment$B$K$D$$$F!#(B
+Assignmentについて。
 
-1.$B9=J8$NDj5A(B(EBNF)
+1.構文の定義(EBNF)
 
 syntax		= identifier "=" { identifier "="} expression ";"
 expression	= term{("+"|"-")term}
@@ -20,7 +20,7 @@ V = ("1"|...|"9"){D}
 L = "A"|"B"|...|"Z"|"a"|"b"|...|"z"
 D = "0"|"1"|"2"|...|"9"
 
-2.$B3FHs=*C<5-9f(BK$B$K$D$$$F(B First(K)$B$H(BFollow(K)
+2.各非終端記号Kについて First(K)とFollow(K)
 
 First(S) = { "A"|...|"Z"|"a"|...|"z" }
 First(E) = { "("|"A"|...|"Z"|"a"|...|"z"|"1"|...|"9"}
@@ -38,5 +38,5 @@ Follow(V) = { "+"|"-"|"*"|"/"|")"|";" }
 
 3.program
 
-4.$B7k2L(B
+4.結果
 

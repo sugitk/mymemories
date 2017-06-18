@@ -1,5 +1,5 @@
 /*                      */
-/* $B1_<~N($N7W;;(B revival */
+/* 円周率の計算 revival */
 /*                      */
 #include <stdio.h>
 #include <stdlib.h>

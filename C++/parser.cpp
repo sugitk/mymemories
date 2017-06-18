@@ -6,12 +6,12 @@
 
 enum boolean {TRUE, FALSE};
 
-// global$BJQ?t(B
+// global変数
 char buf[MAXINPUTBUF];
 int i = 0;
 boolean isLeftValue = TRUE;
 
-// $B4X?t$NDj5A(B
+// 関数の定義
 void analyze();
 void syntaxerr(int);
 
@@ -29,7 +29,7 @@ boolean factor();
 boolean identifier();
 boolean value();
 
-// Follow(K)$B$N3NG'(B
+// Follow(K)の確認
 boolean isFollowS()
 {
 	if(buf[i] == ';')
@@ -97,7 +97,7 @@ boolean isFollowV()
 	return FALSE; 
 }
 
-// $B9=J82r@O(B
+// 構文解析
 
 boolean syntax()
 {
@@ -217,7 +217,7 @@ boolean value()
 	return TRUE;
 }
 
-// $B5/F0ItJ,(B
+// 起動部分
 void analyze()
 {
 	boolean isSuccess;
@@ -228,7 +228,7 @@ void analyze()
 	cout << "Succeeded." << endl;
 }
 
-// error$BI=<((B
+// error表示
 void syntaxerr(int error)
 {
 	cout << "Syntax error at " << i+1 << "th character." << endl;

@@ -1,10 +1,10 @@
 /*                          */
-/* $B1_<~N($N7W;;(B C++ version */
+/* 円周率の計算 C++ version */
 /*                          */
 
 #include <iostream.h>
 
-// M*4 $B$,(B $B7e?t(B
+// M*4 が 桁数
 #define M 256 
 
 class CMpa // Class multiple-precision arithmetic

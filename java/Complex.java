@@ -14,9 +14,9 @@
 
 /* TODO
  *
- * StringtoComplex()‚ð‚Â‚­‚é
+ * StringtoComplex()ã‚’ã¤ãã‚‹
  *
- * ‚à‚Á‚Æmethod‚ðì‚è‚½‚¢‚ªŽ‘—¿‚Í‹ž“s‚É’u‚¢‚Ä‚ ‚é ^^;;
+ * ã‚‚ã£ã¨methodã‚’ä½œã‚ŠãŸã„ãŒè³‡æ–™ã¯äº¬éƒ½ã«ç½®ã„ã¦ã‚ã‚‹ ^^;;
  */
 
 

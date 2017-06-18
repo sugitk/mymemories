@@ -1,5 +1,5 @@
 /*                      */
-/* $B1_<~N($N7W;;(B revival */
+/* 円周率の計算 revival */
 /*                      */
 
 #include <stdio.h>
@@ -22,8 +22,8 @@ int main(void)
 	seki(s2,4,s2);
 	sa(s1,s2,s1);
 
-	printf("\n$B1_<~N($N7W;;(B (1000$B7e$^$G(B)\n\n");
-	printf("($B1_<~N((B)=\n");
+	printf("\n円周率の計算 (1000桁まで)\n\n");
+	printf("(円周率)=\n");
 	printf("%1.1d.", s1[0]);
 
 	for(i=1;i<251;i++)

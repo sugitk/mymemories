@@ -34,9 +34,9 @@ public class Message extends Applet implements Runnable
 	{
 		Image im = createImage(size().width,size().height);
 		Graphics g = im.getGraphics();
-		g.setColor(Color.blue); //”wŒi
+		g.setColor(Color.blue); //èƒŒæ™¯
 		g.fillRect(0,0,size().width,size().height);
-		g.setColor(Color.yellow); //•¶Žš
+		g.setColor(Color.yellow); //æ–‡å­—
 		g.setFont(new Font("TimesRoman",Font.PLAIN,24));
 		g.drawString(message,x,size().height/2);
 		return im;

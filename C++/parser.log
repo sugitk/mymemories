@@ -19,10 +19,10 @@ This is identifier.
 Succeeded.
 p=q=(i-j)/(2*j+k);
 
-$B0J>e$N$h$&$KNc$K:\$C$F$$$k$b$N$ODL$k!#(B
-error$B$,=P$k>l9g$O0J2<$N$h$&$K$J$k!#(B
+以上のように例に載っているものは通る。
+errorが出る場合は以下のようになる。
 
-($BBeF~$K$J$C$F$$$J$$>l9g(B)
+(代入になっていない場合)
 decpc20 % ./parser
 hoge=bsd44-bsd43=bsd;
 This is identifier.
@@ -31,7 +31,7 @@ This is identifier.
 Syntax error at 17th character.
 Error code is 2.
 
-($B3g8L$NBP1~$,<h$l$F$$$J$$>l9g(B)
+(括弧の対応が取れていない場合)
 decpc20 % ./parser
 x=(9*8-(i-j);
 This is identifier.
@@ -42,5 +42,5 @@ This is identifier.
 Syntax error at 13th character.
 Error code is 9.
 
-$B$[$+$K$b%(%i!<$N<oN`$,$"$j!"A4It$G(B14$B2U=j$G8!=P$7$F$$$k!#(B
+ほかにもエラーの種類があり、全部で14箇所で検出している。
 
